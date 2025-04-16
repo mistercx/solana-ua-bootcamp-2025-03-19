@@ -694,7 +694,7 @@ const signature = await solana.token.sign(serialized, secondKeypair);
 */
 
 //await solana.token.createNonce();
-/*
+
 function sleep(ms) {
     return new Promise(resolve => setTimeout(resolve, ms));
 }
@@ -708,9 +708,8 @@ const base64tx = await solana.token.serializeWithNonce(
 
 console.log(`Awaiting 5 minutes before continue ...`);
 await sleep(5 * 60 * 1000);
-*/
+
 console.log(new Date().toLocaleString());
-const base64tx = 'AgAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABo5EsbwCeaYZweT6FTbG1TgkdQxJyG5ZRTtm31QOEt0CFSylSmT2SHNU27OWiIccltGvbiGqQFbocH2hL/5aMAAgEDCDf+TnM9+b+LpoJXVHcw6cItx0FzlRpszOADI3Zcb66MBSvHcdIWAHGp2W+u0qAj0lCFY863ChjnSZEETce0WuF+rmUD8asn5Jelv9AvKhE8WFTXjWJGjnu5t9AtCv/XNYf7ioAcc8shKcCEHBQnB63dLN4502ZOkzTyxPPGGRW0mIQwDQNnlqr8vLncU0PSc7aHHA7ahI5aOUX4R22x+FMAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAan1RcZLFaO4IqEX3PSl4jPA1wxRbIas0TYBi6pQAAABt324ddloZPZy+FGzut5rBy0he1fWzeROoz1hX7/AKns8m30X6fO6QtNGAdoZaYtaq5SiSpW+v6ysbTnZLTmRgIFAwIGAQQEAAAABwMEAwEJA4gTAAAAAAAA';
 const signature = await solana.token.signFrom(base64tx, secondKeypair);
 console.log(`Confirmed with signature: ${signature}`);
 
