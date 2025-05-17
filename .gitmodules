@@ -1,0 +1,4 @@
+[submodule "practice-4/favorites"]
+	path = practice-4/favorites
+	url = file:///home/cx/solana/favorites
+	branch = master
